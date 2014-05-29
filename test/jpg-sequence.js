@@ -10,6 +10,8 @@ describe("JPEG sequence", function()
 	{
 		it("should convert", function(done)
 		{
+			this.timeout(15000);
+			
 			var files = util.getFileList(__dirname+"/fire/jpg/compressed/");
 			
 			webframes( files, function(svg)
