@@ -1,0 +1,37 @@
+{
+  "name": "webframes",
+  "description": " ",
+  "version": "0.0.1",
+  "homepage": "https://github.com/stevenvachon/webframes",
+  "author": {
+    "name": "Steven Vachon",
+    "email": "contact@svachon.com",
+    "url": "http://www.svachon.com/"
+  },
+  "main": "lib",
+  "bin": "bin/smil2css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stevenvachon/webframes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stevenvachon/webframes/issues"
+  },
+  "dependencies": {
+    "async": "~0.9",
+    "image-size": "~0.2",
+    "imagemin": "~0.4",
+    "mmmagic": "~0.3",
+    "smil2css": "git://github.com/stevenvachon/smil2css.git"
+  },
+  "devDependencies": {
+    "chai": "~1.9",
+    "mocha": "~1.18"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha test/ --bail --reporter spec --check-leaks"
+  }
+}
