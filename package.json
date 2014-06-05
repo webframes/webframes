@@ -9,7 +9,7 @@
     "url": "http://www.svachon.com/"
   },
   "main": "lib",
-  "bin": "bin/smil2css",
+  "bin": "bin/webframes",
   "repository": {
     "type": "git",
     "url": "git://github.com/stevenvachon/webframes.git"
@@ -19,9 +19,9 @@
   },
   "dependencies": {
     "async": "~0.9",
-    "image-size": "~0.2",
+    "gm": "~1.16",
     "imagemin": "~0.4",
-    "mmmagic": "~0.3",
+    "nopter": "~0.1",
     "smil2css": "git://github.com/stevenvachon/smil2css.git"
   },
   "devDependencies": {

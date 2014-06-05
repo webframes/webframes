@@ -4,21 +4,21 @@ var webframes = require("../lib");
 
 
 
-describe("JPEG sequence", function()
+describe("PNG sequence", function()
 {
-	describe("that's already compressed", function()
+	describe("with transparency", function()
 	{
 		it("should convert", function(done)
 		{
-			this.timeout(15000);
+			this.timeout(55000);
 			
-			var files = util.getFileList(__dirname+"/fire/jpg/compressed/");
+			var files = util.getFileList(__dirname+"/fire/png24/matted/");
 			
 			webframes( files, function(svg)
 			{
 				//expect(svg).to.equal(expectedResult);
 				
-				require("fs").writeFileSync( require("path").resolve(__dirname+"/fire/test-jpg.svg"), svg );
+				require("fs").writeFileSync( require("path").resolve(__dirname+"/fire/test-png24.svg"), svg );
 				
 				done();
 			});

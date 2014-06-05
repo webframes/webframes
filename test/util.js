@@ -1,5 +1,6 @@
-var fs   = require("fs");
-var path = require("path");
+var child_process = require("child_process");
+var fs            = require("fs");
+var path          = require("path");
 
 
 
@@ -21,7 +22,17 @@ function getFileList(filesPath)
 
 
 
+function shell(args, callback)
+{
+	args = ["../bin/webframes"].concat(args);
+	
+	child_process.execFile("node", args, {cwd:__dirname}, callback);
+}
+
+
+
 module.exports =
 {
-	getFileList: getFileList
+	getFileList: getFileList,
+	shell:       shell
 };
