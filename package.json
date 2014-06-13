@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "~1.9",
+    "cheerio": "~0.17",
     "mocha": "~1.18"
   },
   "engines": {

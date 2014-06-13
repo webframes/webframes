@@ -5,7 +5,7 @@ var util   = require("./util");
 
 describe("Command line", function()
 {
-	it.skip("should convert", function(done)
+	it.skip("should import files and export", function(done)
 	{
 		var input  = __dirname+"/simple/test.svg";
 		var output = __dirname+"/simple/test_output.svg";
@@ -22,5 +22,33 @@ describe("Command line", function()
 			
 			done();
 		});
+	});
+	
+	
+	
+	it.skip("should import folder and export", function(done)
+	{
+		done();
+	});
+	
+	
+	
+	it.skip("should import folder and save", function(done)
+	{
+		done();
+	});
+	
+	
+	
+	it.skip("should import folder, export and save", function(done)
+	{
+		done();
+	});
+	
+	
+	
+	it.skip("should set custom duration", function(done)
+	{
+		done();
 	});
 });
