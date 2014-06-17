@@ -55,6 +55,23 @@ describe("Translucent sequence", function()
 		
 		
 		
+		it("should export lossless and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true },
+				expected: "2-frames/translucent/png24-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export lossy and unminified SMIL", function(done)
 		{
 			// TODO :: use cheerio to check image mimetypes?

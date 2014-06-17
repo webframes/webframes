@@ -127,6 +127,23 @@ describe("Opaque sequence", function()
 		
 		
 		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/opaque/gif-expected-save.wfp"), export:true },
+				expected: "2-frames/opaque/gif-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export unlossy and unminified SMIL (avoid twice-lossy)", function(done)
 		{
 			// Compare to expected SVG result
@@ -204,6 +221,23 @@ describe("Opaque sequence", function()
 			util.run(
 			{
 				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), export:true },
+				expected: "2-frames/opaque/jpg-(lossy)-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(lossy)-expected-save.wfp"), export:true },
 				expected: "2-frames/opaque/jpg-(lossy)-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -303,6 +337,23 @@ describe("Opaque sequence", function()
 		
 		
 		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(near-lossless)-expected-save.wfp"), export:true },
+				expected: "2-frames/opaque/jpg-(near-lossless)-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export lossy and unminified SMIL", function(done)
 		{
 			// Compare to expected SVG result (unlossy and unminified)
@@ -391,6 +442,23 @@ describe("Opaque sequence", function()
 		
 		
 		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/opaque/png8-expected-save.wfp"), export:true },
+				expected: "2-frames/opaque/png8-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export unlossy and unminified SMIL (avoid twice-lossy)", function(done)
 		{
 			// Compare to expected SVG result
@@ -468,6 +536,23 @@ describe("Opaque sequence", function()
 			util.run(
 			{
 				options: { folder:util.resolvePath("2-frames/opaque/png24"), export:true },
+				expected: "2-frames/opaque/png24-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
+		it("should export lossless and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/opaque/png24-expected-save.wfp"), export:true },
 				expected: "2-frames/opaque/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{

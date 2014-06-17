@@ -91,6 +91,23 @@ describe("Transparent sequence", function()
 		
 		
 		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/transparent/gif-expected-save.wfp"), export:true },
+				expected: "2-frames/transparent/gif-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export unlossy and unminified SMIL (avoid twice-lossy)", function(done)
 		{
 			// Compare to expected SVG result
@@ -179,6 +196,23 @@ describe("Transparent sequence", function()
 		
 		
 		
+		it("should export unlossy and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/transparent/png8-expected-save.wfp"), export:true },
+				expected: "2-frames/transparent/png8-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
 		it("should export unlossy and unminified SMIL (avoid twice-lossy)", function(done)
 		{
 			// Compare to expected SVG result
@@ -256,6 +290,23 @@ describe("Transparent sequence", function()
 			util.run(
 			{
 				options: { folder:util.resolvePath("2-frames/transparent/png24"), export:true },
+				expected: "2-frames/transparent/png24-expected-export.svg",
+				callback: function(error, result, expectedResult)
+				{
+					expect(result.export).to.equal( expectedResult.toString() );
+					done();
+				}
+			});
+		});
+		
+		
+		
+		it("should export lossless and unminified SMIL (from project)", function(done)
+		{
+			// Compare to expected SVG result
+			util.run(
+			{
+				options: { open:util.resolvePath("2-frames/transparent/png24-expected-save.wfp"), export:true },
 				expected: "2-frames/transparent/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
