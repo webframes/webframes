@@ -22,7 +22,7 @@
     "gm": "~1.16",
     "imagemin": "~0.4",
     "nopter": "~0.1",
-    "smil2css": "git://github.com/stevenvachon/smil2css.git"
+    "smil2css": "git://github.com/webframes/smil2css.git"
   },
   "devDependencies": {
     "chai": "~1.9",
