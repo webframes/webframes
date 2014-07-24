@@ -1,4 +1,5 @@
 var expect = require("chai").expect;
+var fs     = require("fs");
 var util   = require("./util");
 
 
@@ -54,6 +55,32 @@ describe("Options", function()
 			callback: function(error, result, expectedResult)
 			{
 				expect( util.sizeOf(result.export) ).to.be.above( util.sizeOf(expectedResult) );
+				done();
+			}
+		});
+	});
+	
+	
+	
+	it("gzip", function(done)
+	{
+		var output = util.resolvePath("2-frames/gzip-test.svgz");
+		
+		// Compare size to expected SVG result (unminified SMIL)
+		util.run(
+		{
+			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:output, gzip:true },
+			expected: "2-frames/opaque/gif-expected-export.svg",
+			callback: function(error, result, expectedResult)
+			{
+				if (!error)
+				{
+					result = fs.readFileSync(output);	// Use result from file
+					fs.unlinkSync(output);	// Remove file
+				}
+				
+				expect( util.sizeOf(result) ).to.be.below( util.sizeOf(expectedResult) );
+				
 				done();
 			}
 		});

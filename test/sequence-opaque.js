@@ -261,7 +261,7 @@ describe("Opaque sequence", function()
 				expected: "2-frames/opaque/gif-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
-					expect(result.save).to.equal( expectedResult.toString() );
+					expect(result.save).to.deep.equal(expectedResult);
 					done();
 				}
 			});
@@ -438,7 +438,7 @@ describe("Opaque sequence", function()
 				expected: "2-frames/opaque/jpg-(lossy)-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
-					expect(result.save).to.equal( expectedResult.toString() );
+					expect(result.save).to.deep.equal(expectedResult);
 					done();
 				}
 			});
@@ -615,7 +615,7 @@ describe("Opaque sequence", function()
 				expected: "2-frames/opaque/jpg-(near-lossless)-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
-					expect(result.save).to.equal( expectedResult.toString() );
+					expect(result.save).to.deep.equal(expectedResult);
 					done();
 				}
 			});
@@ -792,7 +792,7 @@ describe("Opaque sequence", function()
 				expected: "2-frames/opaque/png8-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
-					expect(result.save).to.equal( expectedResult.toString() );
+					expect(result.save).to.deep.equal(expectedResult);
 					done();
 				}
 			});
@@ -973,7 +973,7 @@ describe("Opaque sequence", function()
 				expected: "2-frames/opaque/png24-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
-					expect(result.save).to.equal( expectedResult.toString() );
+					expect(result.save).to.deep.equal(expectedResult);
 					done();
 				}
 			});

@@ -1,6 +1,7 @@
 var async         = require("async");
 var child_process = require("child_process");
 var fs            = require("fs");
+var junk          = require("junk");
 var path          = require("path");
 var webframes     = require("../lib");
 
@@ -13,7 +14,7 @@ function getFileList(filesPath)
 	
 	fs.readdirSync(filesPath).forEach( function(fileName)
 	{
-		if (fileName!=".DS_Store" && fileName!="thumbs.db")
+		if (junk.not(fileName))
 		{
 			files.push( filesPath +"/"+ fileName );
 		}

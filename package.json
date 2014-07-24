@@ -1,6 +1,6 @@
 {
   "name": "webframes",
-  "description": " ",
+  "description": "Animated Images for the Web",
   "version": "0.0.1",
   "homepage": "https://github.com/stevenvachon/webframes",
   "author": {
@@ -19,18 +19,20 @@
   },
   "dependencies": {
     "async": "~0.9",
-    "gm": "~1.16",
+    "gm": "^1.16",
     "imagemin": "~0.4",
+    "junk": "~0.3",
     "nopter": "~0.1",
+    "replace-ext": "~0.0.1",
     "smil2css": "git://github.com/webframes/smil2css.git"
   },
   "devDependencies": {
-    "chai": "~1.9",
+    "chai": "^1.9",
     "cheerio": "~0.17",
-    "mocha": "~1.18"
+    "mocha": "^1.18"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.10"
   },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha test/ --bail --reporter spec --check-leaks"
