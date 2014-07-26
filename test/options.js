@@ -18,6 +18,15 @@ describe("Options", function()
 					options: { folder:util.resolvePath("2-frames/opaque/gif"), export:util.resolvePath("2-frames/opaque/gif-expected-export-(contained).svg"), contain:true },
 					callback: callback
 				});
+			},
+			function(callback)
+			{
+				// bgcolor expected SVG result
+				util.run(
+				{
+					options: { folder:util.resolvePath("2-frames/opaque/gif"), export:util.resolvePath("2-frames/opaque/gif-expected-export-(bgcolor).svg"), bgcolor:"blue" },
+					callback: callback
+				});
 			}
 		],
 		function(error)
@@ -28,9 +37,24 @@ describe("Options", function()
 	
 	
 	
+	it("bgcolor", function(done)
+	{
+		util.run(
+		{
+			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, bgcolor:"blue" },
+			expected: "2-frames/opaque/gif-expected-export-(bgcolor).svg",
+			callback: function(error, result, expectedResult)
+			{
+				expect(result.export).to.equal( expectedResult.toString() );
+				done();
+			}
+		});
+	});
+	
+	
+	
 	it("contain", function(done)
 	{
-		// Compare size to expected SVG result (unminified and contained SMIL)
 		util.run(
 		{
 			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, contain:true },
