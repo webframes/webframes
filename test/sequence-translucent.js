@@ -77,7 +77,7 @@ describe("Translucent sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, minifyExport:true },
 				expected: "2-frames/translucent/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -95,7 +95,7 @@ describe("Translucent sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/translucent/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -116,7 +116,7 @@ describe("Translucent sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, lossy:true, "lossy-png":true },
+				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, lossy:true },
 				expected: "2-frames/translucent/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -136,7 +136,7 @@ describe("Translucent sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, lossy:true, "lossy-png":true },
+				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, lossy:true },
 				expected: "2-frames/translucent/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -154,7 +154,7 @@ describe("Translucent sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, lossy:true, "lossy-png":true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/translucent/png24"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -171,7 +171,7 @@ describe("Translucent sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, lossy:true, "lossy-png":true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/translucent/png24-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -204,7 +204,7 @@ describe("Translucent sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/translucent/png24"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/translucent/png24"), save:true, minifyImport:true },
 				expected: "2-frames/translucent/png24-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{

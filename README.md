@@ -41,11 +41,11 @@ var webframes = require("webframes");
 
 webframes({
 	contain: true,
-	"css-export": true,
+	css: true,
 	export: true,
 	files: ["path/to/image1.png", "path/to/image2.png"],
-	"minify-export": true,
-	"minify-import": true,
+	minifyExport: true,
+	minifyImport: true,
 	save: "sequence.wfp",
 }, function(error, result) {
 	if (!error) console.log(result);	//=> {export:[Buffer], save:[Buffer]}
@@ -53,11 +53,13 @@ webframes({
 ```
 
 ## Roadmap
+* try putting CSS at bottom to see if it prevents the need for `--contain`, which will add support for Safari
 * switch from [gm](https://github.com/aheckmann/gm) to [node-imagick](https://github.com/tjfontaine/node-imagick)
 * import SVG sequences
 * localize stored image paths so that tests pass on travis-ci
 
 ## Release History
+* 0.0.4 friendlier non-CLI option names
 * 0.0.3 removed [node-imagemagick-native](https://github.com/mash/node-imagemagick-native)
 * 0.0.2 avoid race conditions on import/open
 * 0.0.1 initial release

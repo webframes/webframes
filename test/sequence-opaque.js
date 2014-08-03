@@ -151,7 +151,7 @@ describe("Opaque sequence", function()
 			// Compare size to expected SVG result (unlossy and unminified SMIL)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/gif-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -169,7 +169,7 @@ describe("Opaque sequence", function()
 			// Compare size to expected SVG result (unlossy and unminified SMIL)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/gif-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/gif-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/gif-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -224,7 +224,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, lossy:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -241,7 +241,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/gif-expected-save.wfp"), export:true, lossy:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/gif-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -275,7 +275,7 @@ describe("Opaque sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/gif"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/opaque/gif"), save:true, minifyImport:true },
 				expected: "2-frames/opaque/gif-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
@@ -329,7 +329,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/jpg-(lossy)-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -347,7 +347,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/jpg-(lossy)-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(lossy)-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/jpg-(lossy)-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -402,7 +402,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), export:true, lossy:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -419,7 +419,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/jpg-(lossy)-expected-save.wfp"), export:true, lossy:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(lossy)-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -452,7 +452,7 @@ describe("Opaque sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/lossy"), save:true, minifyImport:true },
 				expected: "2-frames/opaque/jpg-(lossy)-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
@@ -506,7 +506,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/jpg-(near-lossless)-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -524,7 +524,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/jpg-(near-lossless)-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(near-lossless)-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/jpg-(near-lossless)-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -579,7 +579,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), export:true, lossy:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -596,7 +596,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/jpg-(near-lossless)-expected-save.wfp"), export:true, lossy:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/jpg-(near-lossless)-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -629,7 +629,7 @@ describe("Opaque sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/opaque/jpg/near-lossless"), save:true, minifyImport:true },
 				expected: "2-frames/opaque/jpg-(near-lossless)-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
@@ -683,7 +683,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png8"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png8"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/png8-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -701,7 +701,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (unlossy and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/png8-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/png8-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/png8-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -756,7 +756,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png8"), export:true, lossy:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png8"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -773,7 +773,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/png8-expected-save.wfp"), export:true, lossy:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/png8-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -806,7 +806,7 @@ describe("Opaque sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png8"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png8"), save:true, minifyImport:true },
 				expected: "2-frames/opaque/png8-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{
@@ -860,7 +860,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png24"), export:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png24"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -878,7 +878,7 @@ describe("Opaque sequence", function()
 			// Compare to expected SVG result (lossless and unminified)
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/png24-expected-save.wfp"), export:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/png24-expected-save.wfp"), export:true, minifyExport:true },
 				expected: "2-frames/opaque/png24-expected-export.svg",
 				callback: function(error, result, expectedResult)
 				{
@@ -937,7 +937,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png24"), export:true, lossy:true, "minify-export":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png24"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -954,7 +954,7 @@ describe("Opaque sequence", function()
 			// Just check that it doesn't crash
 			util.run(
 			{
-				options: { open:util.resolvePath("2-frames/opaque/png24-expected-save.wfp"), export:true, lossy:true, "minify-export":true },
+				options: { open:util.resolvePath("2-frames/opaque/png24-expected-save.wfp"), export:true, lossy:true, minifyExport:true },
 				callback: function(error, result)
 				{
 					expect(error).to.be.null;
@@ -987,7 +987,7 @@ describe("Opaque sequence", function()
 			// Compare to expected WFP result (unminified)
 			util.run(
 			{
-				options: { folder:util.resolvePath("2-frames/opaque/png24"), save:true, "minify-import":true },
+				options: { folder:util.resolvePath("2-frames/opaque/png24"), save:true, minifyImport:true },
 				expected: "2-frames/opaque/png24-expected-save.wfp",
 				callback: function(error, result, expectedResult)
 				{

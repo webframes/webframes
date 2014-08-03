@@ -1,7 +1,7 @@
 {
   "name": "webframes",
   "description": "Animated Images for the Web",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "http://svachon.com/webframes",
   "author": {
     "name": "Steven Vachon",
@@ -35,6 +35,6 @@
     "node": ">= 0.10"
   },
   "scripts": {
-    "test": "node node_modules/mocha/bin/mocha test/ --bail --reporter spec --check-leaks"
+    "test": "mocha test/ --bail --reporter spec --check-leaks"
   }
 }

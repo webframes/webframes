@@ -69,12 +69,12 @@ describe("Options", function()
 	
 	
 	
-	it("css-export", function(done)
+	it("css", function(done)
 	{
 		// Compare size to expected SVG result (unminified SMIL)
 		util.run(
 		{
-			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, "css-export":true },
+			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, css:true },
 			expected: "2-frames/opaque/gif-expected-export.svg",
 			callback: function(error, result, expectedResult)
 			{
