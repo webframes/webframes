@@ -1,1 +1,35 @@
 Tested with GraphicsMagic v1.3.19
+
+------
+
+If the first test involving a project save fails, check to make sure that the webframes folder has not moved from its default location on external drive. This issue will persist until a solution is found to the image path is localized somehow. Use this code to check paths and other data:
+
+function open(buffer, callback)
+{
+	require("zlib").gunzip(buffer, function(err, buffer)
+	{
+		var contents = buffer.toString().substr("WebFrames;".length);
+		
+		contents = new Buffer(contents, "base64").toString("ascii");
+		contents = new Buffer(contents, "base64").toString("ascii");
+		
+		callback(err, contents);
+	});
+}
+
+open(result.save, function(err, contents)
+{
+	if (!err)
+	{
+		result.save = contents;
+		
+		open(expectedResult, function(err, contents)
+		{
+			expectedResult = contents;
+			
+			expect(result.save).to.equal(expectedResult);
+			
+			done();
+		});
+	}
+});

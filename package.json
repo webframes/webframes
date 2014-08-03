@@ -1,7 +1,7 @@
 {
   "name": "webframes",
   "description": "Animated Images for the Web",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "http://svachon.com/webframes",
   "author": {
     "name": "Steven Vachon",
@@ -20,7 +20,6 @@
   "dependencies": {
     "async": "~0.9",
     "gm": "^1.16",
-    "imagemagick-native": "^1.2",
     "imagemin": "~0.4",
     "junk": "~0.3",
     "nopter": "~0.1",
