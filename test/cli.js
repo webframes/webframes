@@ -6,13 +6,13 @@ var util   = require("./util");
 
 describe("Command line", function()
 {
-	it("should import files and export", function(done)
+	it("should output an image (from files)", function(done)
 	{
 		var input1 = __dirname+"/2-frames/opaque/gif/1.gif";
 		var input2 = __dirname+"/2-frames/opaque/gif/2.gif";
-		var output = __dirname+"/2-frames/opaque_cli_test.svg";
+		var output = __dirname+"/2-frames/opaque-cli-test.svg";
 		
-		util.shell(["--file",input1,"--file",input2,"--export",output], function(error, stdout, stderr)
+		util.shell(["--input",input1,"--input",input2,"--output",output], function(error, stdout, stderr)
 		{
 			// Remove file
 			if (!error) fs.unlinkSync(output);
@@ -25,12 +25,12 @@ describe("Command line", function()
 	
 	
 	
-	it("should import folder and export", function(done)
+	it("should output an image (from a folder)", function(done)
 	{
 		var input  = __dirname+"/2-frames/opaque/gif";
-		var output = __dirname+"/2-frames/opaque_cli_test.svg";
+		var output = __dirname+"/2-frames/opaque-cli-test.svg";
 		
-		util.shell(["--folder",input,"--export",output], function(error, stdout, stderr)
+		util.shell(["--input",input,"--output",output], function(error, stdout, stderr)
 		{
 			// Remove file
 			if (!error) fs.unlinkSync(output);
@@ -43,12 +43,12 @@ describe("Command line", function()
 	
 	
 	
-	it("should import folder and save", function(done)
+	it("should output a project (from a folder)", function(done)
 	{
 		var input  = __dirname+"/2-frames/opaque/gif";
-		var output = __dirname+"/2-frames/opaque_cli_test.wfp";
+		var output = __dirname+"/2-frames/opaque-cli-test.wfp";
 		
-		util.shell(["--folder",input,"--save",output], function(error, stdout, stderr)
+		util.shell(["--input",input,"--output",output,"--project"], function(error, stdout, stderr)
 		{
 			// Remove file
 			if (!error) fs.unlinkSync(output);
@@ -61,20 +61,15 @@ describe("Command line", function()
 	
 	
 	
-	it("should import folder, export and save", function(done)
+	it("should output an image (from a project)", function(done)
 	{
-		var input   = __dirname+"/2-frames/opaque/gif";
-		var output1 = __dirname+"/2-frames/opaque_cli_test.svg";
-		var output2 = __dirname+"/2-frames/opaque_cli_test.wfp";
+		var input  = __dirname+"/2-frames/opaque/gif-expected.wfp";
+		var output = __dirname+"/2-frames/opaque-cli-test.svg";
 		
-		util.shell(["--folder",input,"--export",output1,"--save",output2], function(error, stdout, stderr)
+		util.shell(["--input-project",input,"--output",output], function(error, stdout, stderr)
 		{
-			// Remove files
-			if (!error)
-			{
-				fs.unlinkSync(output1);
-				fs.unlinkSync(output2);
-			}
+			// Remove file
+			if (!error) fs.unlinkSync(output);
 			
 			expect(error).to.be.null;
 			

@@ -15,7 +15,7 @@ WebFrames images:
 
 Import an image sequence in any of these formats: GIF, JPEG, PNG ... (soon SVG)
 
-Visit the [svachon.com/webframes](http://www.svachon.com/webframes) website for more information and examples.
+Visit the [svachon.com/webframes](https://www.svachon.com/webframes) website for more information and examples.
 
 ## Getting Started
 [Node.js](http://nodejs.org/) `~0.10` and [graphicsmagick](http://graphicsmagick.org/) are required. There're two ways to use it:
@@ -27,7 +27,7 @@ npm install webframes -g
 ```
 After that, check out `webframes -?` for available options. Typical usage might look like:
 ```
-webframes --folder sequence/ --export sequence.svg --save sequence.wfp -csxi
+webframes --input sequence/ --output sequence.svg -Ccm
 ```
 
 ### Programmatic API
@@ -43,12 +43,10 @@ webframes({
 	contain: true,
 	css: true,
 	export: true,
-	files: ["path/to/image1.png", "path/to/image2.png"],
-	minifyExport: true,
-	minifyImport: true,
-	save: "sequence.wfp",
+	input: ["path/to/image1.png", "path/to/image2.png"],
+	minify: true
 }, function(error, result) {
-	if (!error) console.log(result);	//=> {export:[Buffer], save:[Buffer]}
+	if (!error) console.log(result);	//=> [Buffer]
 });
 ```
 
@@ -57,8 +55,10 @@ webframes({
 * switch from [gm](https://github.com/aheckmann/gm) to [node-imagick](https://github.com/tjfontaine/node-imagick)
 * import SVG sequences
 * localize stored image paths so that tests pass on travis-ci
+* merge `--input` and `--input-project`
 
 ## Release History
+* 0.0.5 options reorganized
 * 0.0.4 friendlier non-CLI option names
 * 0.0.3 removed [node-imagemagick-native](https://github.com/mash/node-imagemagick-native)
 * 0.0.2 avoid race conditions on import/open

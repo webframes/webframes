@@ -15,7 +15,7 @@ describe("Options", function()
 				// Container expected SVG result
 				util.run(
 				{
-					options: { folder:util.resolvePath("2-frames/opaque/gif"), export:util.resolvePath("2-frames/opaque/gif-expected-export-(contained).svg"), contain:true },
+					options: { input:util.resolvePath("2-frames/opaque/gif"), output:util.resolvePath("2-frames/opaque/gif-expected-(contained).svg"), contain:true },
 					callback: callback
 				});
 			},
@@ -24,7 +24,7 @@ describe("Options", function()
 				// bgcolor expected SVG result
 				util.run(
 				{
-					options: { folder:util.resolvePath("2-frames/opaque/gif"), export:util.resolvePath("2-frames/opaque/gif-expected-export-(bgcolor).svg"), bgcolor:"blue" },
+					options: { input:util.resolvePath("2-frames/opaque/gif"), output:util.resolvePath("2-frames/opaque/gif-expected-(bgcolor).svg"), bgcolor:"blue" },
 					callback: callback
 				});
 			}
@@ -41,11 +41,11 @@ describe("Options", function()
 	{
 		util.run(
 		{
-			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, bgcolor:"blue" },
-			expected: "2-frames/opaque/gif-expected-export-(bgcolor).svg",
+			options: { input:util.resolvePath("2-frames/opaque/gif"), output:true, bgcolor:"blue" },
+			expected: "2-frames/opaque/gif-expected-(bgcolor).svg",
 			callback: function(error, result, expectedResult)
 			{
-				expect(result.export).to.equal( expectedResult.toString() );
+				expect(result).to.equal( expectedResult.toString() );
 				done();
 			}
 		});
@@ -57,11 +57,11 @@ describe("Options", function()
 	{
 		util.run(
 		{
-			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, contain:true },
-			expected: "2-frames/opaque/gif-expected-export-(contained).svg",
+			options: { input:util.resolvePath("2-frames/opaque/gif"), output:true, contain:true },
+			expected: "2-frames/opaque/gif-expected-(contained).svg",
 			callback: function(error, result, expectedResult)
 			{
-				expect(result.export).to.equal( expectedResult.toString() );
+				expect(result).to.equal( expectedResult.toString() );
 				done();
 			}
 		});
@@ -74,11 +74,11 @@ describe("Options", function()
 		// Compare size to expected SVG result (unminified SMIL)
 		util.run(
 		{
-			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:true, css:true },
-			expected: "2-frames/opaque/gif-expected-export.svg",
+			options: { input:util.resolvePath("2-frames/opaque/gif"), output:true, css:true },
+			expected: "2-frames/opaque/gif-expected.svg",
 			callback: function(error, result, expectedResult)
 			{
-				expect( util.sizeOf(result.export) ).to.be.above( util.sizeOf(expectedResult) );
+				expect( util.sizeOf(result) ).to.be.above( util.sizeOf(expectedResult) );
 				done();
 			}
 		});
@@ -93,8 +93,8 @@ describe("Options", function()
 		// Compare size to expected SVG result (unminified SMIL)
 		util.run(
 		{
-			options: { folder:util.resolvePath("2-frames/opaque/gif"), export:output, gzip:true },
-			expected: "2-frames/opaque/gif-expected-export.svg",
+			options: { input:util.resolvePath("2-frames/opaque/gif"), output:output, gzip:true },
+			expected: "2-frames/opaque/gif-expected.svg",
 			callback: function(error, result, expectedResult)
 			{
 				if (!error)

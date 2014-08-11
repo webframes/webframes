@@ -1,12 +1,12 @@
 {
   "name": "webframes",
   "description": "Animated Images for the Web",
-  "version": "0.0.4",
-  "homepage": "http://svachon.com/webframes",
+  "version": "0.0.5",
+  "homepage": "https://svachon.com/webframes",
   "author": {
     "name": "Steven Vachon",
     "email": "contact@svachon.com",
-    "url": "http://www.svachon.com/"
+    "url": "https://www.svachon.com/"
   },
   "main": "lib",
   "bin": "bin/webframes",
@@ -21,7 +21,7 @@
     "async": "~0.9",
     "gm": "^1.16",
     "imagemin": "~0.4",
-    "junk": "~0.3",
+    "junk": "^1.0",
     "nopter": "~0.1",
     "replace-ext": "~0.0.1",
     "smil2css": "git://github.com/webframes/smil2css.git"
@@ -36,5 +36,23 @@
   },
   "scripts": {
     "test": "mocha test/ --bail --reporter spec --check-leaks"
-  }
+  },
+  "keywords": [
+    "animate",
+    "animated",
+    "animation",
+    "gif",
+    "graphics",
+    "image",
+    "img",
+    "jpeg",
+    "jpg",
+    "pic",
+    "picture",
+    "png",
+    "svg",
+    "transparency",
+    "transparent",
+    "video"
+  ]
 }
