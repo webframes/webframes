@@ -37,6 +37,10 @@
   "scripts": {
     "test": "mocha test/ --bail --reporter spec --check-leaks"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "keywords": [
     "animate",
     "animated",

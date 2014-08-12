@@ -79,6 +79,22 @@ describe("Command line", function()
 	
 	
 	
+	it("should output an image to stdout", function(done)
+	{
+		var input  = __dirname+"/2-frames/opaque/gif";
+		
+		util.shell(["--input",input], function(error, stdout, stderr)
+		{
+			expect(stdout).to.be.a("string");
+			expect(stdout).to.have.length.above(0);
+			expect(error).to.be.null;
+			
+			done();
+		});
+	});
+	
+	
+	
 	it.skip("should set custom duration", function(done)
 	{
 		done();
