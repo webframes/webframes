@@ -52,12 +52,14 @@ webframes({
 
 ## Roadmap
 * try putting CSS at bottom to see if it prevents the need for `--contain`, which will add support for Safari
+* switch from smil2css to manually writing css, retain smil version for `--css false`
 * switch from [gm](https://github.com/aheckmann/gm) to [node-imagick](https://github.com/tjfontaine/node-imagick)
 * import SVG sequences
 * localize stored image paths so that tests pass on travis-ci
 * merge `--input` and `--input-project`
 
 ## Release History
+* 0.0.6 slight optimizations
 * 0.0.5 options reorganized
 * 0.0.4 friendlier non-CLI option names
 * 0.0.3 removed [node-imagemagick-native](https://github.com/mash/node-imagemagick-native)

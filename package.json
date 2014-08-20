@@ -1,7 +1,7 @@
 {
   "name": "webframes",
   "description": "Animated Images for the Web",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://svachon.com/webframes",
   "author": {
     "name": "Steven Vachon",
@@ -20,7 +20,7 @@
   "dependencies": {
     "async": "~0.9",
     "gm": "^1.16",
-    "imagemin": "~0.4",
+    "imagemin": "^1.0",
     "junk": "^1.0",
     "nopter": "~0.1",
     "replace-ext": "~0.0.1",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "chai": "^1.9",
     "cheerio": "~0.17",
-    "mocha": "^1.21"
+    "mocha": "^2.0"
   },
   "engines": {
     "node": ">= 0.10"
