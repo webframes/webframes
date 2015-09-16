@@ -2,6 +2,7 @@
   "name": "webframes",
   "description": "Animated Images for the Web",
   "version": "0.0.6",
+  "license": "MIT",
   "homepage": "https://svachon.com/webframes",
   "author": {
     "name": "Steven Vachon",
@@ -27,9 +28,9 @@
     "smil2css": "git://github.com/webframes/smil2css.git"
   },
   "devDependencies": {
-    "chai": "^1.9",
+    "chai": "^3.2.0",
     "cheerio": "~0.17",
-    "mocha": "^2.0"
+    "mocha": "^2.3.2"
   },
   "engines": {
     "node": ">= 0.10"
@@ -39,7 +40,8 @@
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "license"
   ],
   "keywords": [
     "animate",

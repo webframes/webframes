@@ -1,4 +1,4 @@
-# webframes [![NPM Version](http://badge.fury.io/js/webframes.svg)](http://badge.fury.io/js/webframes) [![Build Status](https://secure.travis-ci.org/webframes/webframes.svg)](http://travis-ci.org/webframes/webframes) [![Dependency Status](https://david-dm.org/webframes/webframes.svg)](https://david-dm.org/webframes/webframes)
+# webframes [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
 
 > Animated images for the web.
 
@@ -18,7 +18,7 @@ Import an image sequence in any of these formats: GIF, JPEG, PNG ... (soon SVG)
 Visit the [svachon.com/webframes](https://www.svachon.com/webframes) website for more information and examples.
 
 ## Getting Started
-[Node.js](http://nodejs.org/) `~0.10` and [graphicsmagick](http://graphicsmagick.org/) are required. There're two ways to use it:
+[Node.js](http://nodejs.org/) `>= 0.10` and [graphicsmagick](http://graphicsmagick.org/) are required. There're two ways to use it:
 
 ### Command-Line Usage  
 To install, type this at the command line:
@@ -65,3 +65,11 @@ webframes({
 * 0.0.3 removed [node-imagemagick-native](https://github.com/mash/node-imagemagick-native)
 * 0.0.2 avoid race conditions on import/open
 * 0.0.1 initial release
+
+
+[npm-image]: https://img.shields.io/npm/v/webframes.svg
+[npm-url]: https://npmjs.org/package/webframes
+[travis-image]: https://img.shields.io/travis/webframes/webframes.svg
+[travis-url]: https://travis-ci.org/webframes/webframes
+[david-image]: https://img.shields.io/david/webframes/webframes.svg
+[david-url]: https://david-dm.org/webframes/webframes
